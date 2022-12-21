@@ -89,21 +89,3 @@ function compute(name) {
 
 }
 
-function mark(name) {
-
-
-	for(var key in monkeys) {
-
-		if(typeof monkeys[key] == "number") continue;
-	
-		// already marked
-		if(monkeys[key][3]) continue;		
-		monkeys[key][3] = 1;
-
-		mark(monkeys[key][0]);
-		mark(monkeys[key][2]);
-
-	}
-
-}
-
